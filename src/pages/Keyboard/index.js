@@ -6,8 +6,10 @@ import KpButton from "../../components/KpButton";
 function Keyboard() {
   return (
     <main>
-      <h1>Keyboard</h1>
       <div className="content">
+        <div id="screen">
+          <h1>Screen</h1>
+        </div>
         <div id="keyboard">
           <div className="row">
             <div className="col-sm">
