@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://47233f00a36c.ngrok.io/api",
+  baseURL: "https://powerful-brushlands-92702.herokuapp.com/api",
 });
 
 export default api;

@@ -1,7 +1,7 @@
 import React from "react";
 
 function KpButton(props) {
-  return <button>{props.digits}</button>;
+  return <button onClick={props.handleClick}>{props.digits}</button>;
 }
 
 export default KpButton;
