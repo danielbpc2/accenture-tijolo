@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
 import KpButton from "../../components/KpButton";
@@ -6,14 +6,14 @@ import KpButton from "../../components/KpButton";
 import api from "../../service/api";
 
 const Keyboard = () => {
-  const [textBox, setText] = useState("");
+  const [textBox, setTextBox] = useState("");
   const [screenText, setScreenText] = useState("");
 
   function handleClick(digit) {
     if (textBox.length >= 4) {
       return;
     }
-    setText(textBox + digit);
+    setTextBox(textBox + digit);
   }
 
   function handleEnter() {
@@ -22,13 +22,24 @@ const Keyboard = () => {
 
       if (number === null) {
         setScreenText(screenText + "");
-        setText("");
+        setTextBox("");
         return;
       }
       setScreenText(screenText + number);
-      setText("");
+      setTextBox("");
     });
   }
+
+  function handleBackspace() {
+    const erasedText = textBox.substring(0, textBox.length - 1);
+    setTextBox(erasedText);
+  }
+
+  function handleBackspaceScreen() {
+    const erasedText = screenText.substring(0, screenText.length - 1);
+    setScreenText(erasedText);
+  }
+
   return (
     <main>
       <div className="content">
@@ -37,6 +48,8 @@ const Keyboard = () => {
           <h2>{screenText}</h2>
           <h2>{textBox}</h2>
         </div>
+        <button onClick={handleBackspaceScreen}>deletar</button>
+        <button onClick={handleBackspace}>Apagar</button>
         <div id="keyboard">
           <div className="row">
             <div className="col-sm">
