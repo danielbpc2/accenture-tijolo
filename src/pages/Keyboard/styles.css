@@ -1,8 +1,16 @@
 #keyboard {
   background: url(../../assets//images/Tijolo.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   width: 100%;
-  max-width: 1780px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+}
+
+.content {
+  width: 100vh;
+  height: 100vh;
 }
