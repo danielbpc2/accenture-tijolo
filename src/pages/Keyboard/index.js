@@ -6,56 +6,53 @@ import KpButton from "../../components/KpButton";
 function Keyboard() {
   return (
     <main>
+      <h1>Keyboard</h1>
       <div className="content">
         <div id="keyboard">
-          <table>
-            <tbody>
-              <tr>
-                <td>
-                  <KpButton digits="1" />
-                </td>
-                <td>
-                  <KpButton digits="abc" />
-                </td>
-                <td>
-                  <KpButton digits="def" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <KpButton digits="ghi" />
-                </td>
-                <td>
-                  <KpButton digits="jkl" />
-                </td>
-                <td>
-                  <KpButton digits="mno" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <KpButton digits="tuv" />
-                </td>
-                <td>
-                  <KpButton digits="wxyz" />
-                </td>
-                <td>
-                  <KpButton digits="pqrs" />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <KpButton digits="*" />
-                </td>
-                <td>
-                  <KpButton digits="0" />
-                </td>
-                <td>
-                  <KpButton digits="#" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="row">
+            <div className="col-sm">
+              <KpButton digits="1" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="abc" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="def" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm">
+              <KpButton digits="ghi" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="jkl" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="mno" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm">
+              <KpButton digits="pqrs" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="tuv" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="wxyz" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm">
+              <KpButton digits="*" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="0" />
+            </div>
+            <div className="col-sm">
+              <KpButton digits="#" />
+            </div>
+          </div>
         </div>
       </div>
     </main>
