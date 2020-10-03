@@ -7,6 +7,7 @@ import api from "../../service/api";
 
 import { TiBackspaceOutline } from "react-icons/ti";
 import { MdSpaceBar } from "react-icons/md";
+import { GrPhone } from "react-icons/gr";
 
 const Keyboard = () => {
   const [textBox, setTextBox] = useState("");
@@ -62,7 +63,10 @@ const Keyboard = () => {
             </div>
             <div className="row">
               <div className="col-xs">
-                <KpButton handleClick={() => handleClick("1")} digits="1" />
+                <KpButton
+                  handleClick={() => handleClick("1")}
+                  digits={<GrPhone />}
+                />
               </div>
               <div className="col-xs">
                 <KpButton handleClick={() => handleClick("2")} digits="abc" />
