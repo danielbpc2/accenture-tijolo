@@ -23,6 +23,8 @@ const Keyboard = () => {
   async function handleEnter() {
     const { data } = await api.post("/", { number: textBox });
     const { number } = data;
+    
+    const number = 2;
 
     if (number === null) {
       setScreenText(screenText + "");
