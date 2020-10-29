@@ -20,18 +20,17 @@ const Keyboard = () => {
     setTextBox(textBox + digit);
   }
 
-  function handleEnter() {
-    api.post("/", { number: textBox }).then((response) => {
-      const { number } = response.data;
+  async function handleEnter() {
+    const { data } = await api.post("/", { number: textBox });
+    const { number } = data;
 
-      if (number === null) {
-        setScreenText(screenText + "");
-        setTextBox("");
-        return;
-      }
-      setScreenText(screenText + number);
+    if (number === null) {
+      setScreenText(screenText + "");
       setTextBox("");
-    });
+      return;
+    }
+    setScreenText(screenText + number);
+    setTextBox("");
   }
 
   function handleBackspace() {
